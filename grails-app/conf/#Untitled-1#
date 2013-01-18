@@ -1,0 +1,22 @@
+import todo.*
+/*
+      def iu1 = new TaskList(listName: 'important undone 1').save()
+      def t = new Task(subject: 'task1', priority: 0, done: false, tasklist: iu1).save()
+
+      def id1 = new TaskList(listName: 'important undone 1').save()
+      t = new Task(subject: 'task1', priority: 0, done: true, tasklist: id1).save()
+
+      def uu1 = new TaskList(listName: 'unimportant undone 1').save()
+      t = new Task(subject: 'task1', priority: 99, done: false, tasklist: uu1).save()
+
+      def ud1 = new TaskList(listName: 'unimportant done 1').save()
+      t = new Task(subject: 'task1', priority: 99, done: true, tasklist: ud1).save()
+*/      
+
+def results = TaskList.createCriteria().list{
+  tasks{
+      eq 'priority', 0L
+      eq 'done', false
+  }  
+
+}
